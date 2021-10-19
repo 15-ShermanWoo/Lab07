@@ -36,4 +36,11 @@ public class Player : MonoBehaviour
             SceneManager.LoadScene("GameLose");
         }
     }
+    public void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Boarder"))
+        {
+            SceneManager.LoadScene("GameLose");
+        }
+    }
 }

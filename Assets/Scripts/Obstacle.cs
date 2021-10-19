@@ -10,7 +10,7 @@ public class Obstacle : MonoBehaviour
     void Update()
     {
         
-        if (transform.position.x <= -2)
+        if (transform.position.x <= -1)
         {
             Player.Score++;
             Destroy(gameObject);

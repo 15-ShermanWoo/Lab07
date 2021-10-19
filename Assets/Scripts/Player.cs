@@ -46,13 +46,13 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Boarder"))
         {
-            GameManager.thisManager.GameOver();
-            //SceneManager.LoadScene("GameLose");
+            //GameManager.thisManager.GameOver();
+            SceneManager.LoadScene("GameLose");
         }
         else if (collision.gameObject.CompareTag("Obstacles"))
         {
-            GameManager.thisManager.GameOver();
-            //SceneManager.LoadScene("GameLose");
+            //GameManager.thisManager.GameOver();
+            SceneManager.LoadScene("GameLose");
         }
     }
 }

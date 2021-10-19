@@ -55,4 +55,5 @@ public class Player : MonoBehaviour
             SceneManager.LoadScene("GameLose");
         }
     }
+   
 }

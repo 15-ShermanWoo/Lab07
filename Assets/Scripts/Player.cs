@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -21,10 +22,18 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+
+        if (gameObject.transform.position.y < 4)
         {
-            rb.AddForce(jump * jumpForce, ForceMode.Impulse);
-            thisAnimation.Play();
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                rb.AddForce(jump * jumpForce, ForceMode.Impulse);
+                thisAnimation.Play();
+            }
+        }
+        else if (gameObject.transform.position.y <= -4)
+        {
+            SceneManager.LoadScene("GameLose");
         }
     }
 }
